@@ -218,7 +218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d37dc6de7f7cd7439e2d3f3bc45df97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
   health: 50
+  score: 0
   hitEffect: {fileID: 8316658317417240737, guid: d11cd8f1fdaf37248954d71f2918666d, type: 3}
   applyCameraShake: 1
 --- !u!114 &-3567437990111013511
