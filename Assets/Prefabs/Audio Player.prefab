@@ -49,6 +49,9 @@ MonoBehaviour:
   shootingVolume: 0.2
   damageClip: {fileID: 8300000, guid: 30ef7c396a450744fb12746530053506, type: 3}
   damageVolume: 0.3
+  mainMenuTrack: {fileID: 8300000, guid: 18db72df1f051604aabbe8b22b32ef3b, type: 3}
+  battleTrack: {fileID: 8300000, guid: 8bcb8492621662b4eabf7774ce7d2fc5, type: 3}
+  endScreenTrack: {fileID: 8300000, guid: 4ced6817fe0ae5147bfddd37d10c6a66, type: 3}
 --- !u!82 &6068277733432433829
 AudioSource:
   m_ObjectHideFlags: 0

@@ -6,21 +6,32 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
   [SerializeField] float sceneLoadDelay = 2f;
+  AudioPlayer audioPlayer;
+  ScoreKeeper scoreKeeper;
+  private void Awake()
+  {
+    audioPlayer = FindObjectOfType<AudioPlayer>();
+    scoreKeeper = FindObjectOfType<ScoreKeeper>();
+  }
 
-  [SerializeField]
   public void LoadGame()
   {
+    scoreKeeper.RestScore();
     SceneManager.LoadScene("Game");
+    audioPlayer.PlayBattleMusic();
+
   }
 
   public void LoadMainMenu()
   {
     SceneManager.LoadScene("MainMenu");
+    audioPlayer.PlayMainMenuMusic();
   }
 
   public void LoadGameOver()
   {
     StartCoroutine(WaitAndLoad("GameOver", sceneLoadDelay));
+    audioPlayer.PlayEndScreenMusic();
   }
 
   public void QuitGame()

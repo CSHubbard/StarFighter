@@ -4,6 +4,26 @@ using UnityEngine;
 
 public class ScoreKeeper : MonoBehaviour
 {
+  ScoreKeeper instance;
+
+  private void Awake()
+  {
+    ManageSingleton();
+  }
+
+  private void ManageSingleton()
+  {
+    int instanceCount = FindObjectsOfType(GetType()).Length;
+    if (instanceCount > 1)
+    {
+      gameObject.SetActive(false);
+      Destroy(gameObject);
+    }
+    else
+    {
+      DontDestroyOnLoad(gameObject);
+    }
+  }
 
   int score = 0;
   public int GetScore() { return score; }
